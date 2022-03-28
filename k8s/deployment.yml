@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appraisal-cloud-gateway-app
+spec:
+  selector:
+    matchLabels:
+      app: appraisal-cloud-gateway-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: appraisal-cloud-gateway-app
+    spec:
+      containers:
+        - name: appraisal-cloud-gateway-app
+          image: lolalambe/appraisal-api-gateway:0.0.1-SNAPSHOT
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9191
