@@ -18,3 +18,8 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 9191
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: cloud
+            - name: CONFIG_URL
+              value: http://appraisal-config-server-app-0.appraisal-config-server-app.default.svc.cluster.local:8888

@@ -1,9 +1,3 @@
-spring:
-  application:
-    name: appraisal-api-gateway
-  config:
-    import: optional:configserver:http://10.24.15.108:8888
-
 logging:
   level:
     reactor:
