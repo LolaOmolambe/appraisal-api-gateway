@@ -1,3 +1,9 @@
+spring:
+  application:
+    name: appraisal-api-gateway
+  config:
+    import: optional:configserver:http://appraisal-config-server-app-0.appraisal-config-server-app.default.svc.cluster.local:8888
+
 logging:
   level:
     reactor:
